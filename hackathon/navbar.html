@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative Home and Left Side Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            scroll-behavior: smooth;
+        }
+
+        /* Main body styles */
+        section {
+            padding: 100px 20px;
+            height: 100vh;
+        }
+
+        /* Home section with background and call-to-action */
+        #home {
+            background: url('https://source.unsplash.com/random/1600x900') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #home h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        #home p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #ff5733;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #c44027;
+        }
+
+        /* Overlay menu */
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0; /* Changed from right to left */
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #f2f2f2;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover, .overlay a:focus {
+            color: #bbb;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            left: 45px; /* Changed from right to left */
+            font-size: 60px;
+        }
+
+        /* Hamburger button styles */
+        .hamburger {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            top: 15px;
+            left: 20px; /* Positioned on the left */
+            color: white;
+            background-color: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        /* Other sections */
+        #skills { background-color: #ddd; }
+        #courses { background-color: #bbb; }
+        #jobs { background-color: #999; }
+        #about { background-color: #777; }
+
+    </style>
+</head>
+<body>
+
+<!-- Hamburger Button -->
+<div class="hamburger" onclick="openNav()">&#9776; Menu</div>
+
+<!-- Fullscreen Overlay Menu (Now Left-Sided) -->
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a href="#home" onclick="closeNav()">Home</a>
+        <a href="#skills" onclick="closeNav()">Skills</a>
+        <a href="#courses" onclick="closeNav()">Course Playlist</a>
+        <a href="#jobs" onclick="closeNav()">Jobs</a>
+        <a href="#about" onclick="closeNav()">About Us</a>
+    </div>
+</div>
+
+<!-- Home Section with Background and Call-to-Action -->
+<section id="home">
+    <h1>Welcome to Our Platform</h1>
+    <p>Explore our courses, jobs, and skill-building opportunities.</p>
+    <a href="#courses" class="cta-button">Explore Courses</a>
+</section>
+
+<!-- Other Sections -->
+<section id="skills">
+    <h1>Skills</h1>
+    <p>This is the skills section content.</p>
+</section>
+
+<section id="courses">
+    <h1>Course Playlist</h1>
+    <p>This is the course playlist section content.</p>
+</section>
+
+<section id="jobs">
+    <h1>Jobs</h1>
+    <p>This is the jobs section content.</p>
+</section>
+
+<section id="about">
+    <h1>About Us</h1>
+    <p>This is the about section content.</p>
+</section>
+
+<script>
+    // Function to open the overlay menu
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    // Function to close the overlay menu
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+
+</body>
+</html>

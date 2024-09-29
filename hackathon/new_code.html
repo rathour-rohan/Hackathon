@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Section with Tabs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .skills-container {
+            width: 60%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .tab {
+            overflow: hidden;
+            border-bottom: 1px solid #ccc;
+        }
+        .tab button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 20px;
+            margin-right: 5px;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #5cb85c;
+            color: white;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px 0;
+        }
+        .tabcontent.active {
+            display: block;
+        }
+        /* Style for skill buttons */
+        .skill-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .skill-list li {
+            margin: 5px 0;
+        }
+        .skill-list button {
+            width: 150px; /* Adjust width as needed */
+            padding: 10px;
+            border: none;
+            background-color: #5cb85c;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            text-align: center;
+            transition: background-color 0.3s;
+            display: inline-block; /* Ensures buttons don't stretch to full width */
+            margin: 0 5px; /* Space between buttons */
+        }
+        .skill-list button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="skills-container">
+    <h2>Skills</h2>
+    
+    <!-- Tab navigation buttons -->
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Programming')" id="defaultOpen">Programming</button>
+        <button class="tablinks" onclick="openTab(event, 'WebDevelopment')">Web Development</button>
+        <button class="tablinks" onclick="openTab(event, 'DataScience')">Data Science</button>
+        <button class="tablinks" onclick="openTab(event, 'Information Technology')">Information Technology</button>
+    </div>
+
+    <!-- Tab content for each category -->
+    <div id="Programming" class="tabcontent">
+        <h3>Programming Skills</h3>
+        <ul class="skill-list">
+            <li>
+                <button onclick="window.location.href='/* Add your Python link here */';">Python</button>
+            </li>
+            <li>
+                <button onclick="window.location.href='/* Add your Java link here */';">Java</button>
+            </li>
+            <li>
+                <button onclick="window.location.href='/* Add your C++ link here */';">C++</button>
+            </li>
+            <li>
+                <button onclick="window.location.href='/* Add your JavaScript link here */';">JavaScript</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id="WebDevelopment" class="tabcontent">
+        <h3>Web Development Skills</h3>
+        <ul class="skill-list">
+            <li>
+                <button onclick="window.location.href='/* Add your HTML & CSS link here */';">HTML & CSS</button>
+            </li>
+            <li>
+                <button onclick="window.location.href='/* Add your JavaScript link here */';">JavaScript</button>
+            </li>
+            <li>
+                <button onclick="window.location.href='/* Add your React link here */';">React</button>
+            </li>
+            <li>
+                <button onclick="window.location.href='/* Add your Node.js link here */';">Node.js</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id="DataScience" class="tabcontent">
+        <h3>Data Science Skills</h3>
+        <ul class="skill-list">
+            <li>
+                <button onclick="window.location.href='/* Add your Data Analysis link here */';">Data Analysis</button>
+            </li>
+            <li>
+                <button onclick="window.location.href='/* Add your Machine Learning link here */';">Machine Learning</button>
+            </li>
+            <li>
+                <button onclick="window.location.href='/* Add your R Programming link here */';">R Programming</button>
+            </li>
+            <li>
+                <button onclick="window.location.href='/* Add your TensorFlow link here */';">TensorFlow</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id="Information Technology" class="tabcontent">
+        <h3>Information Technology Skills</h3>
+        <ul class="skill-list">
+            <li>
+                <button onclick="window.location.href='https://forms.gle/8pkQZo8fzuA3ubkJA';">Cloud Computing</button>
+            </li>
+            <li>
+                <button onclick="window.location.href='https://forms.gle/vm7tt9GgFeH1auEdA';">Artificial Intelligence</button>
+            </li>
+            <li>
+                <button onclick="window.location.href='https://forms.gle/1vCnS1VtywaWWTWs5';">DBMS</button>
+            </li>
+            <li>
+                <button onclick="window.location.href='https://forms.gle/aRnSx2grNGimcSnJ9';">Operating System</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        // Hide all tabcontent
+        const tabcontent = document.getElementsByClassName("tabcontent");
+        for (let i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remove the active class from all tablinks
+        const tablinks = document.getElementsByClassName("tablinks");
+        for (let i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab and add active class to the clicked button
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Set default tab to open
+    document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
