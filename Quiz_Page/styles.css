@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.quiz-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Slider styles */
+.quiz-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.question {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.options label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.result-block {
+    margin-top: 20px;
+    display: none;
+}
+
+#score {
+    color: #4CAF50;
+}
+
+/* Slider controls */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Timer styles */
+#timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Other existing CSS remains unchanged */
+
+
+
+
+/* Timer styles */
+#timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Position slider controls below content */
+.prev, .next {
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    margin: 20px;
+}
+
+.quiz-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 20px;
+}
+
+/* Result block */
+.result-block {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Other existing CSS remains unchanged */
+.result {
+    display: none; /* Initially hide the result */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.quiz-slider {
+    overflow: hidden; /* Prevent overflow */
+}
